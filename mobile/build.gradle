@@ -20,6 +20,14 @@ android {
 }
 
 dependencies {
+    repositories {
+        maven {
+            url '<path to Myo SDK folder>/myorepository'
+        }
+    }
+
+    compile('com.thalmic:myosdk:0.10.+@aar')
+
     compile fileTree(dir: 'libs', include: ['*.jar'])
     wearApp project(':wear')
     compile 'com.android.support:appcompat-v7:21.0.3'
